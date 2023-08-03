@@ -1,0 +1,38 @@
+<div class="container mt-4">
+<div class="main">
+
+    <div class="row">
+    <div class="col-md-6 inp">
+        <h2 class="text-center">Enter Delivery Details</h2>
+        <form id="checkout-form" method="post" enctype="multipart/form-data">{{! submit cheyumbol id kudi pass avum}}
+
+            <label for="">Address</label>
+            <input type="text" name="Address" class="form-control" >
+
+            <label for="">Pincode</label>
+            <input type="text" name="Pincode" class="form-control" >
+
+            <label for="">Mobile</label>
+            <input type="text" name="Mobile" class="form-control"  >
+
+            <input type="text" name="userId" class="form-control"  value="{{users._id}}" hidden> {{! ithu front endil kanikilla hidden anu pakshe data pass cheyumbol userID:xxxxxxxx userID pass avum}}
+
+
+        <h4>Total Amount: Rs.{{total}}</h4>
+        <hr>
+        <h5 style="margin:20px 0px;">payment method</h5>
+        
+            <div class="arange" style="display: flex; flex-direction: column; width: 50%;">
+            <label for="">COD</label>
+            <input type="radio" name="payment-method" value="COD" id="">
+
+            <label for="">Online Payment</label>
+            <input type="radio" name="payment-method" value="ONLINE"  id=""> {{!  name="payment-method" value="ONLINE" ithu kodukumbol user ethu radio anu pass cheyunathu appol objectil payment-method:COD engane varum }}
+
+            <button type="submit" class="btn btn-success mt-4">Submit</button>
+            </div>
+        </form>
+</div>
+</div>
+
+

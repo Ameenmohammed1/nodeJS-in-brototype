@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.bgs{
+  background: #fb0000;
+}
+
+/*# sourceMappingURL=style.css.map */

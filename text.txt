@@ -1,0 +1,36 @@
+step 1
+npx express-generator --hbs
+
+step2
+
+npm i express-handlebars
+
+step3
+
+npm i express-fileupload //add product vazi image polathe file upload cheyumbol athum kudi edukkan
+
+
+setep 4
+
+npm install mongodb
+mongodb connect cheyan
+
+step 5
+
+npm install bcrypt //user tharunna password polathe data decode cheythu databasel sukshikkanum 
+
+step 6
+
+npm install express-session 
+
+
+step 7
+
+razorpay intigaration 
+
+npm i razorpay
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.css">
+ 
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.js"></script>

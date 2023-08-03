@@ -1,0 +1,51 @@
+    <nav class="navbar navbar-expand-lg bgs">
+  <div class="container-fluid bgs">
+    <a class="navbar-brand" href="/">HoneyBees</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/cart">Cart <span style="background-color: rgb(0, 157, 3);" class="badge" id="cart-count">{{cartCount}}</span></a> {{!cartCount upayogichathu etar product user order cheythu ennu kanikkan}}
+        </li>
+        {{#if users}}{{! user (login) undengil order kanikkanam }}
+        <li class="nav-item">
+          <a class="nav-link" href="/orders">orders</a>
+        </li>
+        {{/if}}
+      
+      </ul>
+
+<div class="dropdown" style="margin-right: 10px;">
+  <button class="btn btn-secondary dropdown-toggle bg-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{#if users}}{{! user.js pass cheytha thil users data undengil}}
+        {{users.Name}}
+    {{else}}
+        Account
+    {{/if}}
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+ 
+     {{#if users}}{{!pass cheytha user objectil data undengil}}
+          <a class="dropdown-item" href="/logout">Logout</a>
+          <a class="dropdown-item" href="/signup">signup</a>
+    {{else}}
+          <a class="dropdown-item" href="/login">LogIn</a>
+          <a class="dropdown-item" href="/signup">signup</a>
+    {{/if}}
+
+  </div>
+  </div>
+</nav>

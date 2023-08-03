@@ -1,0 +1,38 @@
+<div class="container">
+    <table class="table mt-5">
+        <thead>
+            <tr>
+                <th class="col">Item</th>
+                <th class="col">Title</th>
+                <th class="col">Price</th>
+                <th class="col">Quantity</th>
+                <th class="col">Address</th>
+                <th class="col">Mobile</th>
+                <th class="col">Payment Method</th>
+                <th class="col">Status</th>
+                
+
+            </tr>
+        </thead>
+    <tbody>
+
+      {{#each OrderProducts}}
+        <tr>
+        
+            <td><img style="width: 70px; height: 70px;" src="/product-images/{{this.product._id}}.jpg" alt=""></td>
+            <td>{{this.product.Name}}</td>
+            <td>{{this.product.Price}}</td>
+            <td>{{this.quantity}}</td>
+             <td>{{../allDetails.deliveryDetails.address}}</td>
+            <td>{{../allDetails.deliveryDetails.monile}}</td>
+            <td>{{../allDetails.PaymentMethod}}</td>
+            <td>{{../allDetails.status}}</td>
+            
+            
+        </tr>
+    {{/each}}
+
+
+
+    </tbody>
+    </table>

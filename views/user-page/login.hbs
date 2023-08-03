@@ -1,0 +1,24 @@
+<div class="container mt-4">
+<div class="row">
+    <div class="col-md-6">
+        <h2 class="text-center">Login</h2>
+        <form action="/login" method="post" enctype="multipart/form-data">
+
+        {{#if loginErr}}
+            <P>invalid password or Email</P>
+        {{/if}}
+
+            <label for="">Emain Addres</label>
+            <input type="text" name="Email" class="form-control">
+
+            <label for="">Password</label>
+            <input type="text" name="Password" class="form-control">
+
+            <a href="/signup">Creat new Account</a><br>
+
+            <button type="submit" class="btn btn-success mt-4">Login</button>
+
+        </form>
+    </div>
+</div>
+</div>

@@ -1,0 +1,59 @@
+<section>
+  <div class="container mt-5">
+    <div class="row">
+      <a
+        href="admin/add-product"
+        style="width: 150px; margin-bottom: 15px; margin-left: auto;"
+        class="btn btn-success ml-a"
+      >Add Product</a>
+    </div>
+    <table class="table" id="dataTable" class="display" style="width:100%">
+      <thead>
+        <tr>
+          <th scope="col">N</th>
+          <th scope="col">Title</th>
+          <th scope="col">Category</th>
+          <th scope="col">Discriptin</th>
+          <th scope="col">Price</th>
+          <th scope="col">Image</th>
+          <th scope="col">Option</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each product}}
+          <tr>
+            <th scope="row">{{@index}}</th>
+            <td>{{this.Name}}</td>
+            <td>{{this.Category}}</td>
+            <td>{{this.Discriptin}}</td>
+            <td>{{this.Price}}</td>
+            <td><img
+                src="/product-images/{{this._id}}.jpg"
+                style="width: 40px; height: 40px;"
+                alt=""
+              /></td>
+            <td>
+              {{!first method}}
+              {{!<a href="/admin/delete-product/{{this._id}}{{!" class="btn btn-primary">Edit</a> }}{{! ivide this._id vilichathu ethu productil ano click cheyunathu athinte id edukanam}}
+
+              {{!second method}}
+              <a
+                href="/admin/edit-product/?id={{this._id}}"
+                class="btn btn-primary"
+              >Edit</a>{{! ivide /?id=id vilichathu ithanu id vilikkan ulla real method}}
+
+              <a
+                href="/admin/delete-product/?id={{this._id}}"
+                class="btn btn-danger"
+                onclick="return confirm('Are you delete {{this.Name}}')"
+              >Delete</a>{{! delete cheyan click cheythatinte data edukkum confirm() upayogikunathu delete cheyan povukayano ennanu cofirm vangukayanu}}
+
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+

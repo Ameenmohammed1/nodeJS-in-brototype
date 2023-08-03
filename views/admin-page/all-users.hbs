@@ -1,0 +1,29 @@
+<div class="container">
+    <table class="table mt-5" id="dataTable" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th class="col">Name</th>
+                <th class="col">Email</th>
+                
+               
+                
+
+            </tr>
+        </thead>
+    <tbody>
+
+      {{#each allUsers}}
+        <tr>
+            <td>{{this.Name}}</td>
+            <td>{{this.Email}}</td>
+            
+            
+            
+            
+        </tr>
+    {{/each}}
+
+
+
+    </tbody>
+    </table>

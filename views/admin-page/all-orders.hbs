@@ -1,0 +1,35 @@
+<div class="container">
+    <table class="table mt-5" id="dataTable" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th class="col">Address</th>
+                <th class="col">Mobile</th>
+                <th class="col">Pincode</th>
+                <th class="col">Payment Method</th>
+                <th class="col">Total Amount</th>
+                <th class="col">Status</th>
+               
+                
+
+            </tr>
+        </thead>
+    <tbody>
+
+      {{#each allOrders}}
+        <tr>
+            <td>{{this.deliveryDetails.address}}</td>
+            <td>{{this.deliveryDetails.monile}}</td>
+            <td>{{this.deliveryDetails.pincode}}</td>
+            <td>{{this.PaymentMethod}}</td>
+            <td>{{this.totalAmount}}</td>
+            <td>{{this.status}}</td>
+            
+            
+            
+        </tr>
+    {{/each}}
+
+
+
+    </tbody>
+    </table>
