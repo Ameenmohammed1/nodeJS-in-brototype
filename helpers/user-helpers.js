@@ -9,8 +9,8 @@ const { resolve, reject } = require('promise');
 
 //razorpay
 var instance = new Razorpay({
-    key_id: "rzp_test_ntiAzJK99bT8ta",
-    key_secret: "iRWlMFGm0nyf4mebqPJHJ8r8",
+    key_id: "your key_id",
+    key_secret: "your secret key",
   });
 
 module.exports={
